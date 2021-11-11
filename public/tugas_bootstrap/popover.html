@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <button type="button" class="btn" href="#" title="Notification" data-toggle="popover"
+                    data-placement="bottom"
+                    data-content="Today, we are going to learn about Popover by using Bootstrap 4"><img
+                        src="notification.png" alt="Notif" style=width:25px;></button>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+
+
+    <div class="container">
+        <div class="text-center">
+            <h2>Popover</h2>
+            <p>Here are some examples of the popover component</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-secondary" title="Left Popover" data-toggle="popover"
+                data-placement="left" data-content="The popover appear on the left side of the element.">Left</button>
+            <button type="button" class="btn btn-outline-primary" title="Top Popover" data-toggle="popover"
+                data-placement="top" data-content="The popover appear on top of the element.">Top</button>
+            <button type="button" class="btn btn-primary" title="Definition" data-toggle="popover"
+                data-placement="bottom" data-trigger="focus"
+                data-content="Popover is a pop-up box that appears when the user clicks on an element; the popover component is similar to tooltips. The difference is that the popover can contain much more content. (click anywhere in the document to close this popover)">Click
+                me</button>
+            <a href="#" title="Right Popover" data-toggle="popover" data-placement="right"
+                data-content="The popover appear on the righy side of the element.">Right</a>
+            <button type="button" class="btn btn-light" title="Hover Over Me" data-toggle="popover" data-trigger="hover"
+                data-content="The popover will appear when you move the mouse pointer over the element.">Hover</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+</body>
+
+</html>
