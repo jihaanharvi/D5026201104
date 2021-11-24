@@ -53,7 +53,6 @@ public function edit($id)
 public function update(Request $request)
 {
 	DB::table('mutasi')->where('mutasi_id',$request->id)->update([
-        'mutasi_id' => $request->mutasi_id,
 		'mutasi_idPegawai' => $request->mutasi_idPegawai,
 		'mutasi_departemen' => $request->mutasi_departemen,
 		'mutasi_subDepartemen' => $request->mutasi_subDepartemen,
