@@ -25,40 +25,44 @@
         <div class="row mt-3">
             <div class="col-md-2 col-sm-4 col-form-label">ID</div>
             <div class="col-1">:</div>
-            <div class="col-md-9 col-sm-7">
+            <div class="col-md-3 col-sm-7">
                 <input type="number" class="form-control" name="mutasi_id" required="required"> <br/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-2 col-sm-4 col-form-label">ID Pegawai</div>
             <div class="col-1">:</div>
-            <div class="col-md-9 col-sm-7">
+            <div class="col-md-3 col-sm-7">
                 <input type="number" class="form-control" name="mutasi_idPegawai" required="required"> <br/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-2 col-sm-4 col-form-label">Departemen</div>
             <div class="col-1">:</div>
-            <div class="col-md-9 col-sm-7">
+            <div class="col-md-3 col-sm-7">
                 <input type="text" class="form-control" name="mutasi_departemen" required="required"> <br/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-2 col-sm-4 col-form-label">Sub Departemen</div>
             <div class="col-1">:</div>
-            <div class="col-md-9 col-sm-7">
+            <div class="col-md-3 col-sm-7">
                 <input type="text" class="form-control" name="mutasi_subDepartemen" required="required"> <br/>
             </div>
         </div>
         <div class="row">
             <div class="col-md-2 col-sm-4 col-form-label">Mulai Bertugas</div>
             <div class="col-1">:</div>
-            <div class="col-md-9 col-sm-7">
+            <div class="col-md-3 col-sm-7">
                 <input type="datetime" class="form-control" name="mutasi_mulaiBertugas" required="required"> <br/>
             </div>
         </div>
-        <div class="row mt-4">
-		    <input class="col-5 offset-4 btn btn-primary" type="submit" value="Simpan Data">
+        <div class="row mt-3">
+            <div class="col-md-2 col-sm-4 col-form-label"></div>
+            <div class="col-1"></div>
+            <div class="col-md-3 col-sm-7">
+                <button type="submit" class="form-control btn-success">Simpan Data</button>
+            </div>
         </div>
 	</form>
 
