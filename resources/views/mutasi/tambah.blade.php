@@ -1,73 +1,66 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.ceria')
+@section('title', 'Data Mutasi')
+@section('judulhalaman', 'Tambah Data Mutasi')
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<title>PWEB D - Membuat CRUD Tabel Mutasi</title>
-</head>
-<body>
-    <div class="container my-5">
-
-	<h2>Tambah Mutasi Baru</h2>
+@section('konten')
 
 	<a href="/mutasi"> Kembali</a>
 
-	<br/>
-	<br/>
-
 	<form action="/mutasi/store" method="post">
 		{{ csrf_field() }}
-        <div class="row mt-3">
-            <div class="col-md-2 col-sm-4 col-form-label">ID</div>
-            <div class="col-1">:</div>
-            <div class="col-md-3 col-sm-7">
-                <input type="number" class="form-control" name="mutasi_id" required="required"> <br/>
+        <div class="container mt-4">
+            <div class="row mt-4">
+                <label for="id" class="col-md-2 col-sm-4 control-label">ID Pegawai</label>
+                <div class="col-1">:</div>
+                <div class="col-md-3 col-sm-7" id="id">
+                    <input type="number" class="form-control" name="mutasi_idPegawai" required="required">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2 col-sm-4 col-form-label">ID Pegawai</div>
-            <div class="col-1">:</div>
-            <div class="col-md-3 col-sm-7">
-                <input type="number" class="form-control" name="mutasi_idPegawai" required="required"> <br/>
+
+            <div class="row mt-4">
+                <label for="departemen" class="col-md-2 col-sm-4 control-label">Departemen</label>
+                <div class="col-1">:</div>
+                <div class="col-md-3 col-sm-7" id="departemen">
+                    <input type="text" class="form-control" name="mutasi_departemen" required="required">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2 col-sm-4 col-form-label">Departemen</div>
-            <div class="col-1">:</div>
-            <div class="col-md-3 col-sm-7">
-                <input type="text" class="form-control" name="mutasi_departemen" required="required"> <br/>
+
+            <div class="row mt-4">
+                <label for="subdepartemen" class="col-md-2 col-sm-4 control-label">Sub Departemen</label>
+                <div class="col-1">:</div>
+                <div class="col-md-3 col-sm-7" id="subdepartemen">
+                    <input type="text" class="form-control" name="mutasi_subDepartemen" required="required">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2 col-sm-4 col-form-label">Sub Departemen</div>
-            <div class="col-1">:</div>
-            <div class="col-md-3 col-sm-7">
-                <input type="text" class="form-control" name="mutasi_subDepartemen" required="required"> <br/>
+
+            <div class="row mt-4">
+                <label for="dtpickerdemo" class="col-md-2 col-sm-4 control-label">Mulai Bertugas</label>
+                <div class="col-1">:</div>
+                <div class="col-md-3 ml-4 col-sm-7 input-group date" id='dtpickerdemo'>
+                    <input type='text' class="form-control" name="mutasi_mulaiBertugas" required="required" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                <script type="text/javascript">
+                    $(function() {
+                        $('#dtpickerdemo').datetimepicker({
+                            format: "YYYY-MM-DD hh:mm:ss",
+                            "defaultDate": new Date(),
+                            locale : "id"
+                        });
+                    });
+                </script>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2 col-sm-4 col-form-label">Mulai Bertugas</div>
-            <div class="col-1">:</div>
-            <div class="col-md-3 col-sm-7">
-                <input type="datetime" class="form-control" name="mutasi_mulaiBertugas" required="required"> <br/>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-2 col-sm-4 col-form-label"></div>
-            <div class="col-1"></div>
-            <div class="col-md-3 col-sm-7">
-                <button type="submit" class="form-control btn-success">Simpan Data</button>
+
+            <div class="row mt-5">
+                <div class="col-md-2 col-sm-4 col-form-label"></div>
+                <div class="col-1"></div>
+                <div class="col-md-3 col-sm-7">
+                    <button type="submit" class="form-control btn-success">Simpan Data</button>
+                </div>
             </div>
         </div>
 	</form>
 
-</div>
-
-
-</body>
-</html>
+@endsection

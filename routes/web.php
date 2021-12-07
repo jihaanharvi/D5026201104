@@ -44,3 +44,16 @@ Route::post('/mutasi/store','MutasiController@store');
 Route::get('/mutasi/edit/{id}','MutasiController@edit');
 Route::post('/mutasi/update','MutasiController@update');
 Route::get('/mutasi/hapus/{id}','MutasiController@hapus');
+
+//route CRUD absen
+Route::get('/absen','AbsenController@index');
+Route::get('/absen/tambah','AbsenController@tambah');
+Route::post('/absen/store','AbsenController@store');
+Route::get('/absen/edit/{id}','AbsenController@edit');
+Route::post('/absen/update','AbsenController@update');
+Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
+Route::get('ceria', function(){
+    return view('layout.ceria');
+});
+
