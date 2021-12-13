@@ -2,12 +2,11 @@
 @section('css')
 <link rel="stylesheet" href="/css/container.css">
 @endsection
+@section('title','Data Mutasi')
+@section('judul halaman','Data Mutasi')
 @section('konten')
 
-
-    <div class="container my-5">
-
-    <h3>Data Mutasi</h3>
+    <h2>Data Mutasi</h2>
 
 	<a href="/mutasi/tambah" class="btn btn-success btn-sm" role="button"> + Tambah Mutasi Baru</a>
 
@@ -16,7 +15,9 @@
 
 	<table class="table table-hover mt-3">
 		<tr class="table-info">
-			<th>ID Pegawai</th>
+            <th>No</th>
+			<!--<th>ID Pegawai</th>-->
+            <th>Nama Pegawai</th>
 			<th>Departemen</th>
 			<th>Sub Departemen</th>
 			<th>Mulai Bertugas</th>
@@ -24,7 +25,8 @@
 		</tr>
 		@foreach($mutasi as $m)
 		<tr>
-			<td>{{ $m->mutasi_idPegawai }}</td>
+            <td>{{ $loop->iteration }}</td>
+			<td>{{ $m->pegawai_nama }}</td>
 			<td>{{ $m->mutasi_departemen }}</td>
 			<td>{{ $m->mutasi_subDepartemen }}</td>
 			<td>{{ $m->mutasi_mulaiBertugas }}</td>
@@ -37,7 +39,8 @@
 		@endforeach
 	</table>
 
-    </div>
+    {{ $mutasi->links()  }}
+
 
 @endsection
 

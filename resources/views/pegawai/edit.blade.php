@@ -22,7 +22,7 @@
             <div class="row mt-4">
                 <label for="jabatan" class="col-md-2 col-sm-4 control-label">Jabatan</label>
                 <div class="col-1">:</div>
-                <div class="col-md-3 col-sm-7" id="id">
+                <div class="col-md-3 col-sm-7" id="jabatan">
                     <input type="text" class="form-control" name="jabatan" required="required" value="{{ $p->pegawai_jabatan }}">
                 </div>
             </div>
@@ -43,11 +43,12 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row my-5">
                 <div class="col-md-2 col-sm-4 col-form-label"></div>
                 <div class="col-1"></div>
                 <div class="col-md-3 col-sm-7">
                     <button type="submit" class="form-control btn-success">Simpan Data</button>
+                </div>
             </div>
         </div>
 	</form>

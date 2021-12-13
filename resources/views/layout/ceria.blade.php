@@ -54,23 +54,9 @@
                   <a href="/mutasi">Mutasi</a>
 	          </li>
               <li>
-                <a href="#">Minggu Depan</a>
-              </li>
-              <li>
-                <a href="#">Praktikum</a>
+                <a href="/masker">Masker</a>
               </li>
 	        </ul>
-
-	        <!-- ======= Footer ======= -->
-            <footer id="footer" class="footer">
-                <div class="copyright">
-                    <h6>
-                        &copy; Hak Cipta oleh 5026201104 - Jihaan Harvi Habibah
-                    </h6>
-                </div>
-            </footer>
-            <!-- End Footer -->
-
 	      </div>
     	</nav>
 
@@ -92,8 +78,21 @@
             </div>
           </div>
         </nav>
+
+        <div class="container my-5">
         <h2>@yield('judulhalaman')</h2>
-         @yield('konten')
+        @yield('konten')
+         <!-- ======= Footer ======= -->
+         <footer id="footer" class="footer my-5">
+            <div class="copyright">
+                <h6>
+                    &copy; Hak Cipta oleh 5026201104 - Jihaan Harvi Habibah
+                </h6>
+            </div>
+        </footer>
+        <!-- End Footer -->
+        </div>
+
         </div>
 		</div>
 

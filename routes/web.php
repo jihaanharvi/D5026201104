@@ -36,6 +36,8 @@ Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+Route::get('/pegawai/cari','PegawaiController@cari');
+Route::get('/pegawai/detail/{id}','PegawaiController@view');
 
 //route CRUD mutasi
 Route::get('/mutasi','MutasiController@index');
@@ -57,3 +59,12 @@ Route::get('ceria', function(){
     return view('layout.ceria');
 });
 
+//route CRUD masker
+Route::get('/masker','MaskerController@index');
+Route::get('/masker/tambah','MaskerController@tambah');
+Route::post('/masker/store','MaskerController@store');
+Route::get('/masker/edit/{id}','MaskerController@edit');
+Route::post('/masker/update','MaskerController@update');
+Route::get('/masker/hapus/{id}','MaskerController@hapus');
+Route::get('/masker/cari','MaskerController@cari');
+Route::get('/masker/detail/{id}','MaskerController@view');

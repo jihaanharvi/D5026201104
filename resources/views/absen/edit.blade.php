@@ -14,8 +14,8 @@
             <div class="row mt-4">
                 <label for="nama" class="col-md-2 col-sm-4 control-label">Nama Pegawai</label>
                 <div class="col-1">:</div>
-                <div class="col-md-3 col-sm-7 mr-3 " id="nama">
-                    <select class="form-control" name="idpegawai">
+                <div class="col-md-3 col-sm-7 mr-3" id="nama">
+                    <select class="form-control" name="IDPegawai">
                         @foreach($pegawai as $p )
                             <option value="{{ $p->pegawai_id }}" @if($p->pegawai_id===$a->IDPegawai) selected="selected" @endif> {{ $p->pegawai_nama }}</option>
                         @endforeach
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <div class="row my-5">
                 <div class="col-md-2 col-sm-4 col-form-label"></div>
                 <div class="col-1"></div>
                 <div class="col-md-3 col-sm-7">

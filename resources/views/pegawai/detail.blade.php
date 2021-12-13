@@ -1,19 +1,18 @@
 @extends('layout.ceria')
 @section('title', 'Data Pegawai')
-@section('judulhalaman', 'Tambah Data Pegawai')
+@section('judulhalaman', 'View Detail Data Pegawai')
 
 @section('konten')
 
 	<a href="/pegawai"> Kembali</a>
 
-	<form action="/pegawai/store" method="post">
-		{{ csrf_field() }}
+	@foreach($pegawai as $p)
         <div class="container mt-4">
             <div class="row mt-4">
                 <label for="nama" class="col-md-2 col-sm-4 control-label">Nama</label>
                 <div class="col-1">:</div>
                 <div class="col-md-3 col-sm-7" id="nama">
-                    <input type="text" class="form-control" name="nama" required="required">
+                    <label class="control-label">{{ $p->pegawai_nama }}</label>
                 </div>
             </div>
 
@@ -21,7 +20,7 @@
                 <label for="jabatan" class="col-md-2 col-sm-4 control-label">Jabatan</label>
                 <div class="col-1">:</div>
                 <div class="col-md-3 col-sm-7" id="jabatan">
-                    <input type="text" class="form-control" name="jabatan" required="required">
+                    <label class="control-label">{{ $p->pegawai_jabatan }}</label>
                 </div>
             </div>
 
@@ -29,25 +28,17 @@
                 <label for="umur" class="col-md-2 col-sm-4 control-label">Umur</label>
                 <div class="col-1">:</div>
                 <div class="col-md-3 col-sm-7" id="umur">
-                    <input type="number" class="form-control" name="umur" required="required">
+                    <label class="control-label">{{ $p->pegawai_umur }}</label>
                 </div>
             </div>
 
-            <div class="row mt-4">
+            <div class="row my-4">
                 <label for="alamat" class="col-md-2 col-sm-4 control-label">Alamat</label>
                 <div class="col-1">:</div>
                 <div class="col-md-3 col-sm-7" id="alamat">
-                    <textarea class="form-control" required="required" name="alamat"></textarea>
-                </div>
-            </div>
-
-            <div class="row my-5">
-                <div class="col-md-2 col-sm-4 col-form-label"></div>
-                <div class="col-1"></div>
-                <div class="col-md-3 col-sm-7">
-                    <button type="submit" class="form-control btn-success">Simpan Data</button>
+                    <label class="control-label">{{ $p->pegawai_alamat }}</label>
                 </div>
             </div>
         </div>
-	</form>
+	@endforeach
 @endsection

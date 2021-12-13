@@ -10,12 +10,26 @@
 		{{ csrf_field() }}
         <div class="container mt-4">
             <div class="row mt-4">
-                <label for="id" class="col-md-2 col-sm-4 control-label">ID Pegawai</label>
+                <label for="nama" class="col-md-2 col-sm-4 control-label">Nama Pegawai</label>
+                <div class="col-1">:</div>
+                <div class="col-md-3 col-sm-7" id="nama">
+                    <select class="form-control" name="IDPegawai" required="required">
+                        @foreach($pegawai as $p )
+                            <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <!--
+            <div class="row mt-4">
+                <label for="id" class="col-md-2 col-sm-4 control-label">Nama Pegawai</label>
                 <div class="col-1">:</div>
                 <div class="col-md-3 col-sm-7" id="id">
                     <input type="number" class="form-control" name="mutasi_idPegawai" required="required">
                 </div>
             </div>
+            -->
 
             <div class="row mt-4">
                 <label for="departemen" class="col-md-2 col-sm-4 control-label">Departemen</label>
@@ -53,7 +67,7 @@
                 </script>
             </div>
 
-            <div class="row mt-5">
+            <div class="row my-5">
                 <div class="col-md-2 col-sm-4 col-form-label"></div>
                 <div class="col-1"></div>
                 <div class="col-md-3 col-sm-7">

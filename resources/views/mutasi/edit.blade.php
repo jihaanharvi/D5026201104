@@ -12,10 +12,14 @@
 		<input type="hidden" name="id" value="{{ $m->mutasi_id }}">
         <div class="container mt-4">
             <div class="row mt-4">
-                <label for="id" class="col-md-2 col-sm-4 control-label">ID Pegawai</label>
+                <label for="id" class="col-md-2 col-sm-4 control-label">Nama Pegawai</label>
                 <div class="col-1">:</div>
                 <div class="col-md-3 col-sm-7" id="id">
-                    <input type="number" class="form-control" name="mutasi_idPegawai" required="required" value="{{ $m->mutasi_idPegawai }}">
+                    <select class="form-control" name="IDPegawai">
+                        @foreach($pegawai as $p )
+                            <option value="{{ $p->pegawai_id }}" @if($p->pegawai_id===$m->mutasi_idPegawai) selected="selected" @endif> {{ $p->pegawai_nama }}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
 
@@ -55,7 +59,7 @@
                 </script>
             </div>
 
-            <div class="row mt-5">
+            <div class="row my-5">
                 <div class="col-md-2 col-sm-4 col-form-label"></div>
                 <div class="col-1"></div>
                 <div class="col-md-3 col-sm-7">
