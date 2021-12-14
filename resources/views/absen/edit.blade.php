@@ -50,12 +50,12 @@
                     <div class="form-check-inline">
                         <label class="form-check-label" for="h">
                             <input type="radio" id="h" name="status" value="H" @if($a->Status==='H') checked="checked" @endif>
-                        HADIR </label>
+                        Hadir </label>
                     </div>
                     <div class="form-check-inline">
                         <label class="form-check-label" for="a">
                             <input type="radio" id="a" name="status" value="A" @if($a->Status==='A') checked="checked" @endif>
-                        TIDAK HADIR </label>
+                        Tidak Hadir</label>
                     </div>
                 </div>
             </div>
