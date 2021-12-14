@@ -3,10 +3,8 @@
 <link rel="stylesheet" href="/css/container.css">
 @endsection
 @section('title', 'Data Absen')
-@section('judul halaman', 'Data Absen')
+@section('judulhalaman', 'Data Absen')
 @section('konten')
-
-    <h2>Data Absen</h2>
 
     <a href="/absen/tambah" class="btn btn-success btn-sm" role="button"> + Tambah Absen Baru</a>
 

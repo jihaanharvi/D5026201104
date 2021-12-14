@@ -1,7 +1,6 @@
 @extends('layout.ceria')
 @section('title', 'Data Mutasi')
 @section('judulhalaman', 'Edit Data Mutasi')
-
 @section('konten')
 
 	<a href="/mutasi"> Kembali</a>
@@ -69,8 +68,6 @@
         </div>
 	</form>
 	@endforeach
-
-
-
+    
 @endsection
 

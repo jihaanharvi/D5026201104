@@ -1,7 +1,6 @@
 @extends('layout.ceria')
 @section('title', 'Data Mutasi')
 @section('judulhalaman', 'Tambah Data Mutasi')
-
 @section('konten')
 
 	<a href="/mutasi"> Kembali</a>

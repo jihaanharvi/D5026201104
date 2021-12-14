@@ -3,10 +3,8 @@
 <link rel="stylesheet" href="/css/container.css">
 @endsection
 @section('title','Data Mutasi')
-@section('judul halaman','Data Mutasi')
+@section('judulhalaman','Data Mutasi')
 @section('konten')
-
-    <h2>Data Mutasi</h2>
 
 	<a href="/mutasi/tambah" class="btn btn-success btn-sm" role="button"> + Tambah Mutasi Baru</a>
 
@@ -40,7 +38,6 @@
 	</table>
 
     {{ $mutasi->links()  }}
-
 
 @endsection
 

@@ -1,7 +1,6 @@
 @extends('layout.ceria')
 @section('title', 'Data Masker')
 @section('judulhalaman', 'Edit Data Masker')
-
 @section('konten')
 
 	<a href="/masker"> Kembali</a>
@@ -54,4 +53,5 @@
         </div>
 	</form>
 	@endforeach
+    
 @endsection
