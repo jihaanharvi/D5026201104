@@ -79,7 +79,7 @@
           </div>
         </nav>
 
-        <div class="container my-5">
+        <div class="container">
         <h2>@yield('judulhalaman')</h2>
         @yield('konten')
          <!-- ======= Footer ======= -->

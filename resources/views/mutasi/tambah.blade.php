@@ -21,16 +21,6 @@
                 </div>
             </div>
 
-            <!--
-            <div class="row mt-4">
-                <label for="id" class="col-md-2 col-sm-4 control-label">Nama Pegawai</label>
-                <div class="col-1">:</div>
-                <div class="col-md-3 col-sm-7" id="id">
-                    <input type="number" class="form-control" name="mutasi_idPegawai" required="required">
-                </div>
-            </div>
-            -->
-
             <div class="row mt-4">
                 <label for="departemen" class="col-md-2 col-sm-4 control-label">Departemen</label>
                 <div class="col-1">:</div>
