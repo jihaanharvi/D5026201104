@@ -86,7 +86,7 @@
          <footer id="footer" class="footer my-5">
             <div class="copyright">
                 <h6>
-                    &copy; Hak Cipta oleh 5026201104 - Jihaan Harvi Habibah
+                    &copy; Hak Cipta oleh 5026201104 - <strong>Jihaan Harvi Habibah</strong>
                 </h6>
             </div>
         </footer>
