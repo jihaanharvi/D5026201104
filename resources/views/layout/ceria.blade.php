@@ -56,6 +56,9 @@
               <li>
                 <a href="/masker">Masker</a>
               </li>
+              <li>
+                <a href="/karyawan1">Karyawan</a>
+              </li>
 	        </ul>
 	      </div>
     	</nav>
